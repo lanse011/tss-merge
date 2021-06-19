@@ -1,4 +1,5 @@
 import unittest
+from merge import *
 
 class TestMerge(unittest.TestCase):
 
@@ -10,7 +11,6 @@ class TestMerge(unittest.TestCase):
 
         self.assertEqual([[2,23], [25,30]], merge_result)
 
-    
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main() 
