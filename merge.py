@@ -9,6 +9,16 @@ class Merge:
 
     def merge(intervals):
         """ Merging a list of intervals into overlapping intervals"""
+
+        # return empty list if intervals contains no data
+        if len(intervals) is 0:
+            return []
+
+        # check that list only contains intervals with length 2
+        for i, x in enumerate(intervals):
+            if type(x) is not list or len(x) is not 2: 
+                return "'" + str(x) + "' is not an interval"
+
         
         # sort the intervals by its first value
         intervals.sort(key = lambda x: x[0])
